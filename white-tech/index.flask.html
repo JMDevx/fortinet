@@ -1,0 +1,67 @@
+<html>
+
+<head>  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="#">
+<link rel="icon" type="image/png" href="/images/favicon.png"/>
+</head>
+<body>
+
+<div id="app">
+  <div class="app-view">  
+    <header class="app-header">
+      <img src="top-logo.png" class="top-logo"></img>
+     <br/>
+     <br/>
+      <h2 class="app-subheading">
+Ingresa los siguientes datos para generar el documento deseado
+      </h2>
+    </header>
+    {% block content %}
+    <form method="post">
+      
+    
+          <div class="labels-form">
+              <label for="tech">Tecnología</label>
+              <select  class="st0" id="tech" name="tech" >
+                {% for row in headings %}
+
+                <option value="{{ row }}"> {{ row }} </option>
+                {% endfor %}
+
+              </select>
+      
+      
+              <label for ="model">Modelo del equipo</label>
+              <select  class="st0" id="model" name="model" >
+            
+                {% for row in data %}
+                <option value="{{ row }}"> {{ row }} </option>
+                {% endfor %}
+          
+              </select>            
+      
+   
+              <label for="cust">Cliente</label>
+              <input   class="st1" id="cust" name="cust" type="text" />
+      
+        </div>
+          <div class="buttons">
+          <button type="submit" name="document" class="app-button" value="gen_doc">Generar Documento</button>
+          <button type="submit" name="restart" class="app-button" value="go_start">Volver al Inicio</button>
+        </div> 
+
+  </form>
+  {% endblock %}
+    
+<img  src="fortinet-logo.png" class="logo"></img>
+  </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="{{ url_for('static', filename='jquery-3.6.0.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='tech.js')}}"></script>
+</html>
