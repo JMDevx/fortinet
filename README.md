@@ -22,11 +22,6 @@
 
   <p align="center">
 
-    <br />
-
-    <br />
-    <br />
-
    
   </p>
 </div>
@@ -35,7 +30,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Contenido</summary>
   <ol>  
             <li><a href="#Información">Flask</a></li>
         <li><a href="#Información">Información</a></li>
